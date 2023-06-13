@@ -129,10 +129,12 @@ export default function CreateTransaction({
           });
 
           console.log("RESULT", res.data);
+
           setTimeout(() => {
             history.push("/pool");
             setLoading(false);
-          }, 1000);
+          }, 3000);
+
         } else {
           console.log("ERROR, NOT OWNER.");
         }

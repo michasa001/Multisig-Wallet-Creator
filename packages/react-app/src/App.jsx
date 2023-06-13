@@ -58,7 +58,7 @@ const { ethers } = require("ethers");
 
 /// 📡 What chain are your contracts deployed to?
 // let BACKEND_URL = "http://localhost:49899/";
-let BACKEND_URL = "https://multisig-wallet-sb.herokuapp.com/";
+const poolServerUrl = "https://wild-teal-panda-vest.cyclic.app/";
 const initialNetwork = NETWORKS.sepolia; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
@@ -546,7 +546,7 @@ function App(props) {
         </Route>
         <Route path="/create">
           <CreateTransaction
-            poolServerUrl={BACKEND_URL}
+            poolServerUrl={poolServerUrl}
             contractName={contractName}
             contractAddress={contractAddress}
             mainnetProvider={mainnetProvider}
@@ -563,7 +563,7 @@ function App(props) {
         </Route>
         <Route path="/pool">
           <Transactions
-            poolServerUrl={BACKEND_URL}
+            poolServerUrl={poolServerUrl}
             contractName={contractName}
             address={address}
             userSigner={userSigner}
